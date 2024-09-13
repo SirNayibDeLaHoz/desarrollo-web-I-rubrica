@@ -74,6 +74,7 @@ ul {
 .logo {
     color: #ffffff;
     font-size: 14px;
+    text-transform: capitalize;
 }
 
 .label-menu-toggle {
@@ -108,13 +109,23 @@ ul {
 
 .content-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 2rem;
     gap: 2rem;
     margin: 40px auto;
     max-width: 1065px;
-    max-height: 450px;
+    max-height: auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
 }
 
 .content-heading {
@@ -122,13 +133,14 @@ ul {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
 }
 
 .content-paragraph {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     color: #ffffff;
+    text-align: center;
 }
 
 .content-link {
@@ -143,10 +155,10 @@ ul {
 }
 
 .image-content {
-    flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .content-image {
@@ -163,6 +175,8 @@ ul {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    display: block;
+    margin: 0 auto;
 }
 
 .btn-contacto:hover {
@@ -178,6 +192,8 @@ ul {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    display: block;
+    margin: 0 auto;
 }
 
 .btn-contacto-2:hover {
@@ -209,27 +225,29 @@ ul {
 /* Section invertido */
 .content-section-reverse {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
     padding: 2rem;
     gap: 2rem;
-    margin: 90px auto;
-    max-width: 1065px;
-    max-height: 450px;
+    text-align: center;
+}
+
+.image-content-reverse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-image-reverse {
+    max-width: 80%;
+    max-height: 80%;
 }
 
 .text-content-reverse {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    flex: 1;
-}
-
-.image-content-reverse {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
@@ -240,10 +258,6 @@ ul {
     align-items: center;
 }
 
-.content-image-reverse {
-    max-width: 100%;
-    height: auto;
-}
 
 /* Section invertido */
 
@@ -254,6 +268,10 @@ ul {
     color: #ffffff;
     max-width: 1065px;
     max-height: 460px;
+}
+
+.custom-plugin-paragraph {
+    display: block;
 }
 
 .custom-plugin-section h2 {
@@ -302,13 +320,15 @@ ul {
 }
 
 .card h3 {
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .card-mobil h3 {
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .card p {
@@ -401,6 +421,7 @@ ul {
 
     .logo {
         font-size: 20px;
+        text-transform: uppercase;
     }
 
     .label-menu-toggle {
@@ -422,6 +443,7 @@ ul {
     }
 
     .content-section {
+        background-color: transparent;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -430,8 +452,22 @@ ul {
         margin: 40px auto;
         max-width: 1065px;
         max-height: 450px;
+        flex-direction: row;
+        text-align: left;
     }
-    
+
+    .image-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-image {
+        max-width: 80%;
+        height: 80%;
+    }
+
     .text-content {
         display: flex;
         flex-direction: column;
@@ -440,16 +476,19 @@ ul {
         flex: 1;
     }
 
-    .image-content {
-        justify-content: center;
+    .content-heading {
+        padding-top: 1.5rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-align: left;
     }
 
-    .text-content {
-        align-items: flex-start;
-    }
-
-    .image-content-reverse {
-        justify-content: center;
+    .content-paragraph {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        text-align: left;
     }
 
     .image-content-reverse-2 {
@@ -459,21 +498,47 @@ ul {
         align-items: center;
     }
 
-    .text-content-reverse {
-        justify-content: center;
-    }
-
     .company-paragraph {
         font-size: 16px;
     }
 
     .icon-1 {
         display: block;
-        width: 700px;
+        width: 60%;
     }
 
     .icon-2 {
         display: none;
+    }
+
+    /* Section invertido */
+    .content-section-reverse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        gap: 12rem;
+        /* margin: 90px auto; */
+        margin: auto auto auto auto;
+        max-width: 1065px;
+        max-height: 450px;
+        flex-direction: row;
+    }
+
+    .image-content-reverse {
+        display: block;
+        justify-content: center;
+    }
+
+    .content-image-reverse {
+        max-width: 100%;
+        height: auto;
+        margin-left: 70px;
+    }
+
+    .text-content-reverse {
+        display: block;
+        justify-content: center;
     }
 
     .custom-plugin-section {
@@ -483,6 +548,10 @@ ul {
         color: #ffffff;
         max-width: 1065px;
         max-height: 460px;
+    }
+
+    .custom-plugin-paragraph {
+        display: none;
     }
 
     .custom-plugin-section h2 {
@@ -531,13 +600,15 @@ ul {
     }
 
     .card h3 {
-        font-size: 17px;
+        font-size: 15px;
         margin-bottom: 10px;
+        text-transform: uppercase;
     }
 
     .card-mobil h3 {
-        font-size: 17px;
+        font-size: 13px;
         margin-bottom: 10px;
+        text-transform: uppercase;
     }
 
     .card p {
@@ -574,7 +645,7 @@ ul {
         align-items: center;
         padding: 2rem;
         gap: 2rem;
-        margin: 90px auto;
+        margin: 40px auto;
         max-width: 1065px;
         max-height: 450px;
         background: #ADA7A7;
@@ -582,7 +653,7 @@ ul {
     }
 
     .btn-contacto {
-        background-color: #857978;
+        background-color: #3F3434;
         color: #ffffff;
         padding: 10px 20px;
         border: none;
@@ -590,12 +661,13 @@ ul {
         cursor: pointer;
         font-size: 16px;
         font-weight: bold;
+        margin: 0;
     }
-    
+
     .btn-contacto:hover {
         background-color: #040504;
     }
-    
+
 
     .btn-contacto-2 {
         background-color: #a31717;
@@ -606,6 +678,7 @@ ul {
         cursor: pointer;
         font-size: 16px;
         font-weight: bold;
+        margin: 0;
     }
 
     .btn-contacto-2:hover {
@@ -629,5 +702,6 @@ ul {
     .footer-bottom {
         display: none;
     }
+
     /* Footer */
 }
